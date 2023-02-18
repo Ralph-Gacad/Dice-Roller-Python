@@ -18,6 +18,7 @@ def num_die():
 def roll_dice():
    min_val = 1
    max_val = 6
+   max_val1 = 20
    roll_again = 'y'
 
    while roll_again.lower() == 'yes' or roll_again.lower() == 'y':
@@ -36,10 +37,16 @@ def roll_dice():
 
        elif amount == '20sides':
            print('Rolling the dice...')
-           dice_1 = random.randint(1, 20)
+           print(random.randint(min_val, max_val1))
+
+       else:
+           print('Rolling the die...')
+           dice_1 = random.randint(min_val, max_val)
            print(f'The value is: {dice_1}')
 
        roll_again = input('Roll Again? ')
 
 if __name__ == '__main__':
    roll_dice()
+
+
